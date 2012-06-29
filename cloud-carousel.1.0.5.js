@@ -135,7 +135,7 @@
 					 return false;
 				 });
 		}
-		$(container).bind('mouseover click',this,function(event){
+		$(container).bind('click',this,function(event){
 			
 			clearInterval(event.data.autoRotateTimer);		// Stop auto rotation if mouse over.
 			var	text = $(event.target).attr('alt');		
@@ -153,7 +153,7 @@
 					var	idx = $(event.target).data('itemIndex');	
 					var	frontIndex = event.data.frontIndex;
 					//var	diff = idx - frontIndex;                    
-                    var        diff = (idx - frontIndex) % images.length;
+                    var diff = (idx - frontIndex) % images.length;
                     if (Math.abs(diff) > images.length / 2) {
                         diff += (diff > 0 ? -images.length : images.length);
                     }
@@ -184,9 +184,10 @@
 		// Shows the text from the front most item.
 		this.showFrontText = function()
 		{	
-			if ( items[this.frontIndex] === undefined ) { return; }	// Images might not have loaded yet.
-			$(options.titleBox).html( $(items[this.frontIndex].image).attr('title'));
-			$(options.altBox).html( $(items[this.frontIndex].image).attr('alt'));				
+			var currentItemIndex = ( this.frontIndex + items.length ) % items.length;
+			if ( items[ currentItemIndex ] === undefined ) { return; }	// Images might not have loaded yet.
+			$(options.titleBox).html( $(items[ currentItemIndex ].image).attr('title'));
+			$(options.altBox).html( $(items[ currentItemIndex ].image).attr('alt'));				
 		};
 						
 		this.go = function()
@@ -207,8 +208,8 @@
 		this.rotate = function(direction)
 		{	
 			this.frontIndex -= direction;
-			this.frontIndex %= items.length;					 			
-			this.destRotation += ( Math.PI / items.length ) * ( 2*direction );
+			this.frontIndex %= items.length;				 			
+			this.destRotation += ( Math.PI / items.length ) * ( 2 * direction );
 			this.showFrontText();
 			this.go();			
 		};

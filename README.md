@@ -83,6 +83,62 @@ Parameters
   
 </tbody></table>
 
+<table width="100%" border="1" cellpadding="2">
+  <tbody><tr>
+    <th>Parameter</th>
+    <th>Description (from V1.0.1)</th>
+    <th>Default Value</th>
+  </tr>
+  
+  <tr>
+    <td>speed</td>
+    <td>This value represents the speed at which the carousel rotates between items. Good values are around 0.1 ~ 0.3. A value of one will instantly move from one item to the next without any rotation animation. Values should be greater than zero and less than one.</td>
+    <td class="noWrap">0.2</td>
+  </tr>
+  <tr>
+    <td>autoRotate</td>
+    <td>Turn on auto-rotation of the carousel using either <strong>'left'</strong> or <strong>'right'</strong> as the value. The carousel will rotate between items automatically. The auto-rotation stops when the user hovers over the carousel area, and starts again when the mouse is moved off.</td>
+    <td class="noWrap">'no'</td>
+  </tr>
+  <tr>
+    <td>autoRotateDelay</td>
+    <td>Delay in milliseconds between each rotation in auto-rotate mode. A minimum value of 1000 (i.e. one second) is recommended.</td>
+    <td class="noWrap">1500  </td>
+  </tr>
+
+  
+</tbody></table>
+
+<table width="100%" border="1" cellpadding="2">
+  <tbody><tr>
+    <th>Parameter</th>
+    <th>Description (from V1.0.2)</th>
+    <th>Default Value</th>
+  </tr>
+  
+  <tr>
+    <td>mouseWheel</td>
+    <td>If set to true, this will enable mouse wheel support for the carousel. You will need to include this mouse wheel plugin first:   <a href="http://plugins.jquery.com/project/mousewheel">http://plugins.jquery.com/project/mousewheel</a></td>
+    <td class="noWrap">false</td>
+  </tr>
+  
+</tbody></table>
+
+<table width="100%" border="1" cellpadding="2">
+  <tbody><tr>
+    <th>Parameter</th>
+    <th>Description (from V1.0.4)</th>
+    <th>Default Value</th>
+  </tr>
+  
+  <tr>
+    <td>bringToFront</td>
+    <td>If true, moves the item clicked on to the front.<a href="http://plugins.jquery.com/project/mousewheel"></a></td>
+    <td class="noWrap">false</td>
+  </tr>
+  
+</tbody></table>
+
 CSS
 =============
 Cloud Carousel does not need any specific CSS styles to operate. However, you will want to style the carousel container, text boxes and buttons.

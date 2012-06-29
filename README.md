@@ -143,9 +143,9 @@ CSS
 =============
 Cloud Carousel does not need any specific CSS styles to operate. However, you will want to style the carousel container, text boxes and buttons.
 
-You may wish to set the initial display property to *display:hidden* for these items so they will automatically dissapear if JavaScript is disabled. This is a good thing as they have no use without JavaScript enabled. The plugin will automatically set the display property of these items to display:inline.
+You may wish to set the initial display property to **display:hidden** for these items so they will automatically dissapear if JavaScript is disabled. This is a good thing as they have no use without JavaScript enabled. The plugin will automatically set the display property of these items to display:inline.
 
-Setting the container to *overflow:scroll* is a good idea as this will create a neat scrolling box with the images inside if JavaScript is disabled.
+Setting the container to **overflow:scroll** is a good idea as this will create a neat scrolling box with the images inside if JavaScript is disabled.
 
 It is advisable not to apply styles to the images used in the carousel.
 
